@@ -1,2 +1,2 @@
 # formacao-django-alura
-Repositório para os cursos da Formação Django na plataforma Alura.
+Repositório para os cursos da Formação Django na plataforma Alura. Teste
