@@ -1,8 +1,10 @@
 from django.db import models
 from django.forms import CharField
 from datetime import datetime
+from pessoas.models import Pessoa
 
 class Receita(models.Model):
+    enviado_por = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
     nome_receita = models.CharField(max_length=200)
     ingredientes = models.TextField()
     modo_de_preparo = models.TextField()
@@ -10,4 +12,4 @@ class Receita(models.Model):
     rendimento = models.TextField(max_length=100)
     categoria = models.CharField(max_length=100)
     data_receita = models.DateTimeField(default=datetime.now, blank=True)
-    enviado_por = models.CharField(max_length=50, default='Desconhecido')
+    
