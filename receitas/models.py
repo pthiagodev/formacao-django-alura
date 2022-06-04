@@ -10,3 +10,4 @@ class Receita(models.Model):
     rendimento = models.TextField(max_length=100)
     categoria = models.CharField(max_length=100)
     data_receita = models.DateTimeField(default=datetime.now, blank=True)
+    enviado_por = models.CharField(max_length=50, default='Desconhecido')
