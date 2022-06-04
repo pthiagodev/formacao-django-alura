@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    
     {% include 'partials/preloader.html' %}
     {% include 'partials/search.html' %}
     {% include 'partials/menu.html' %}
-
-    <!-- ##### Best Receipe Area Start ##### -->
+    
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
@@ -29,11 +27,12 @@
                 </div>                    
                 {% endfor %}
                 {% else %}
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <h1>Receita não encontrada! :(</h1>
                 {% endif %}
             </div>
         </div>
     </section>
-    <!-- ##### Best Receipe Area End ##### -->
-
+    
     {% include 'partials/footer.html' %}
 {% endblock %}
