@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.forms import CharField
 from datetime import datetime
@@ -13,3 +14,4 @@ class Receita(models.Model):
     categoria = models.CharField(max_length=100)
     data_receita = models.DateTimeField(default=datetime.now, blank=True)
     publicada = models.BooleanField(default=False)
+    foto_receita = models.ImageField(upload_to='fotos/%d/%m/%Y', blank=True)
