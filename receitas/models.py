@@ -2,10 +2,10 @@ from distutils.command.upload import upload
 from django.db import models
 from django.forms import CharField
 from datetime import datetime
-from pessoas.models import Pessoa
+from django.contrib.auth.models import User
 
 class Receita(models.Model):
-    enviado_por = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
+    enviado_por = models.ForeignKey(User, on_delete=models.CASCADE)
     nome_receita = models.CharField(max_length=200)
     ingredientes = models.TextField()
     modo_de_preparo = models.TextField()
