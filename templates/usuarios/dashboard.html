@@ -35,7 +35,7 @@
                         <div class="receipe-content">
                             <a href="{% url 'receita' receita.id %}">
                                 <h5>{{receita.nome_receita}}</h5>
-                                <a href="{% url 'deleta_receita.html' receita.id %}" type="button" class="btn-danger">Deletar</a>
+                                <a href="{% url 'deleta_receita' receita.id %}" type="button" class="btn-danger">Deletar</a>
                             </a>
                         </div>
                     </div>
